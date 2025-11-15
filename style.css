@@ -17,10 +17,13 @@ h1, h2, h3 { margin-top: 0; }
 
 
 #logo {
-  width: 160px;
+  width:160px;
   height: 160px;
   border: 1px solid #dcdcdc;
   margin: 12px;
+  grid-area: p;
+
+  margin: auto;
 }
 
 
@@ -56,4 +59,30 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+header{
+    grid-area: h;
+}
+
+nav {
+    grid-area: n;
+}
+
+footer{
+    grid-area: f;
+}
+
+main{
+    grid-area: m;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    grid-template-areas:
+        "h h h p"
+        "n n n n"
+        "m m m m"
+        "f f f f";
 }
